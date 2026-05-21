@@ -188,7 +188,7 @@
                     <div class="absolute inset-0 rounded-full" style="box-shadow: 0 0 0 8px var(--theme-page-bg); pointer-events: none;"></div>
     
                     <!-- 🌟 2. 移除按鈕身上的 style 屬性 -->
-                    <button id="btn-capture" class="btn-active-scale w-20 h-20 text-white rounded-full flex items-center justify-center shadow-lg transition-colors duration-300 relative z-10">
+                    <button id="btn-capture" class="btn-active-scale w-20 h-20 text-white rounded-full flex items-center justify-center shadow-lg transition-colors duration-200 relative z-10" style="background: var(--theme-accent);">
                         <svg id="icon-camera" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="2"></circle></svg>
                         <svg id="icon-check" class="w-12 h-12 hidden text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                     </button>
@@ -228,7 +228,7 @@
 
         <!-- ══ Right Panel: Photostrip ══ -->
         <div class="w-full lg:w-auto flex flex-col items-center pb-10">
-            <div id="photostrip" class="w-[340px] h-[1020px] strip-texture p-4 shadow-xl relative border-2 border-white rounded-sm no-select">
+            <div id="photostrip" class="w-[340px] h-[1020px] strip-texture p-4 shadow-xl relative rounded-sm no-select">
                 <div id="photostrip-content" class="w-full h-full flex flex-col justify-between relative">
 
                     <!-- Decorative Icons Layer -->
@@ -666,7 +666,7 @@ const ICON_SETS = {
     star: {
         name: '⭐ 星星',
         icons: [
-            { top: 120, left: 18,  size: 38, rotate:  20, opacity: 1.0,  fill: 'VAR_ACCENT',      path: 'M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z' },
+            { top: 80, left: 12,  size: 38, rotate:  20, opacity: 1.0,  fill: 'VAR_ACCENT',      path: 'M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z' },
             { top: 290, right: 14, size: 30, rotate: -10, opacity: 0.9,  fill: '#facc15',          path: 'M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z' },
             { top: 490, left: 12,  size: 44, rotate:  35, opacity: 0.85, fill: 'VAR_ACCENT_LIGHT', path: 'M12 1L14.8 9.2L23 12L14.8 14.8L12 23L9.2 14.8L1 12L9.2 9.2L12 1Z' },
             { top: 660, right: 16, size: 36, rotate: -25, opacity: 1.0,  fill: '#f472b6',          path: 'M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z' },
@@ -691,7 +691,7 @@ const ICON_SETS = {
             { top: 310, left: 10,  size: 36, rotate: -15, opacity: 0.9,  fill: '#f472b6',          path: 'M12 2C8.69 2 6 4.69 6 8c0 3.5 3 6 6 9 3-3 6-5.5 6-9 0-3.31-2.69-6-6-6zm0 14l-1-1.5C9.5 13.5 8 11.5 8 10c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.5-1.5 3.5-3 4.5L12 16zm0 0v4m-1 0h2' },
             { top: 500, right: 16, size: 44, rotate:  25, opacity: 0.85, fill: '#facc15',          path: 'M12 2C8.69 2 6 4.69 6 8c0 3.5 3 6 6 9 3-3 6-5.5 6-9 0-3.31-2.69-6-6-6zm0 14l-1-1.5C9.5 13.5 8 11.5 8 10c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.5-1.5 3.5-3 4.5L12 16zm0 0v4m-1 0h2' },
             { top: 700, left: 12,  size: 32, rotate: -20, opacity: 0.9,  fill: 'VAR_ACCENT_LIGHT', path: 'M12 2C8.69 2 6 4.69 6 8c0 3.5 3 6 6 9 3-3 6-5.5 6-9 0-3.31-2.69-6-6-6zm0 14l-1-1.5C9.5 13.5 8 11.5 8 10c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.5-1.5 3.5-3 4.5L12 16zm0 0v4m-1 0h2' },
-            { top: 850, right: 18, size: 28, rotate:   5, opacity: 0.8,  fill: 'VAR_ACCENT',      path: 'M12 1L14.8 9.2L23 12L14.8 14.8L12 23L9.2 14.8L1 12L9.2 9.2L12 1Z' },
+            { top: 850, right: 18, size: 28, rotate:   5, opacity: 0.8,  fill: '#30b38d',      path: 'M12 1L14.8 9.2L23 12L14.8 14.8L12 23L9.2 14.8L1 12L9.2 9.2L12 1Z' },
         ]
     },
     diamond: {
@@ -952,7 +952,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPhotoIndex--;
             iconCamera.classList.remove('hidden');
             iconCheck.classList.add('hidden');
-            btnCapture.style.background = currentBgTheme.accent;
+            btnCapture.style.background = 'var(--theme-accent)';
             if (wasMax || video.classList.contains('hidden')) await startCamera();
             updateUI();
             statusMsg.innerText = `已移除上一張，準備重拍第 ${currentPhotoIndex + 1} 張。`;
@@ -1036,11 +1036,11 @@ document.addEventListener('DOMContentLoaded', () => {
             isCountingDown = false;
             btnCapture.disabled = btnRetake.disabled = btnFlip.disabled = false;
             updateUI();
-            statusMsg.innerText = '拍攝完成！請按下按鈕產生圖片！';
+            statusMsg.innerText = '拍攝完成！請按下打勾按鈕產生圖片！';
             if (stream) {
                 stream.getTracks().forEach(t => t.stop());
                 video.classList.add('hidden');
-                placeholder.innerHTML = '<p class="text-green-500 font-bold">拍攝完成！</p><p class="text-sm mt-2">點擊下方按鈕匯出</p>';
+                placeholder.innerHTML = '<p class="text-green-500 font-bold">拍攝完成！</p><p class="text-sm mt-2">點擊下方打勾按鈕匯出</p>';
                 placeholder.classList.remove('hidden');
             }
         } else {
@@ -1049,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnCapture.disabled = btnRetake.disabled = btnFlip.disabled = false;
                 iconCamera.classList.remove('hidden');
                 iconCheck.classList.add('hidden');
-                btnCapture.style.background = currentBgTheme.accent;
+                btnCapture.style.background = 'var(--theme-accent)';
                 updateUI();
             }, 1500);
         }
@@ -1067,7 +1067,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i=1; i<=TOTAL; i++) { const img = document.getElementById(`photo-${i}`); img.src=''; img.classList.add('hidden'); }
         iconCamera.classList.remove('hidden');
         iconCheck.classList.add('hidden');
-        btnCapture.style.background = currentBgTheme.accent;
+        btnCapture.style.background = 'var(--theme-accent)';
         placeholder.innerHTML = '<svg class="w-16 h-16 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812-1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><p>請先開啟相機</p>';
         startCamera();
     });
